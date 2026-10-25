@@ -28,27 +28,215 @@
         <i onclick="openMenuMobile()" class="icon text-[20px] lg:hidden"></i>
 
         <!--==================#1-3 NAV  ==================-->
-        <ul class="hidden lg:flex gap-6 h-full *:capitalize *:flex *:items-center *:gap-1.5 *:cursor-pointer">
-            <li class="group h-full">product
+        <ul class="hidden lg:flex gap-6 h-full *:capitalize *:flex *:items-center *:gap-1.5">
+            <li class="group/main">
+                <span class="cursor-pointer">product</span>
                 <i class="icon"></i>
-                <div class="absolute top-full left-0 flex w-full invisible opacity-0 group-hover:opacity-100 group-hover:visible p-10">
-                    <div class="bg-white w-71/100 rounded-tl-2xl rounded-bl-2xl flex flex-wrap px-4 py-5">
-                        <h6>product overview <i class="icon"></i></h6>
+
+                <!--=======#1-3-1 DROPDOWN 1 =======-->
+                <div class="absolute top-full left-0 flex w-full opacity-0 invisible group-hover/main:opacity-100 group-hover/main:visible p-10 *:px-4 *:py-5 duration-400 **:duration-400">
+
+                    <!-- LEFT SIDE -->
+                    <div class="bg-white w-71/100 rounded-tl-2xl rounded-bl-2xl flex flex-wrap *:w-full">
+
+                        <!-- title -->
+                        <h6 class=" flex items-center gap-1.5 font-medium border-b-2 border-b-[#bdbdbd6b] pb-2.5">product overview <i class="icon"></i></h6>
+
+                        <!-- first row -->
+                        <div class="flex flex-wrap gap-2.5 pt-2.5 border-b-2 border-b-[#bdbdbd6b] pb-2.5 *:w-full">
+                            <h6 class="uppercase text-[#6b6b76] text-[11px] font-bold">channels</h6>
+                            <ul class="flex justify-between *:w-30/100 *:cursor-pointer">
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">voice</span>
+                                        <span class="text-[13px]">human-like conversation</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">chat</span>
+                                        <span class="text-[13px]">Safe, on-brand replies</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">email</span>
+                                        <span class="text-[13px]">contextual resolutions</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!-- second row -->
+                        <div class="flex justify-between pt-2.5 pb-8 *:w-30/100 ">
+                            <div class="flex flex-wrap content-start gap-2.5 *:w-full">
+                                <h6 class="uppercase text-[#6b6b76] text-[11px] font-bold">build</h6>
+                                <ul class="flex flex-col gap-3 *:cursor-pointer">
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white">𐂮</i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">AOPs</span>
+                                            <span class="text-[13px]">Workflows for AI agents</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">integration</span>
+                                            <span class="text-[13px]">pre-build connectors</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-wrap content-start gap-2.5 *:w-full">
+                                <h6 class="uppercase text-[#6b6b76] text-[11px] font-bold">optimize</h6>
+                                <ul class="flex flex-col gap-3 *:cursor-pointer">
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">experiments</span>
+                                            <span class="text-[13px]">live A/B testing</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white">﫣</i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">testing & QA</span>
+                                            <span class="text-[13px]">Simulation at scale</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-wrap content-start gap-2.5 *:w-full">
+                                <h6 class="uppercase text-[#6b6b76] text-[11px] font-bold">scale</h6>
+                                <ul class="flex flex-col gap-3 *:cursor-pointer">
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white">𐃂</i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">insight & reporting</span>
+                                            <span class="text-[13px]">voice of the customer</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">watchtower</span>
+                                            <span class="text-[13px]">always on QA</span>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-2 group">
+                                        <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                        <div class="flex flex-wrap content-center *:w-full">
+                                            <span class="capitalize text-[14px] font-medium leading-3 mt-1">suggestions</span>
+                                            <span class="text-[13px]">AI powered knowledge</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- last row -->
+                        <div class="w-full flex p-2.5 gap-2.5 rounded-md bg-[#eaeaeb] group cursor-pointer hover:bg-[#eeeeff]">
+                            <i class="icon p-3 bg-white rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                            <div class="flex flex-wrap content-center *:w-full">
+                                <span class="capitalize text-[14px] font-medium leading-3 mt-1">duet</span>
+                                <span class="text-[13px]">AI partner to build self-improving agents</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-[#f4f4f5] w-29/100 rounded-tr-2xl rounded-br-2xl px-4 py-5"></div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="flex flex-wrap bg-[#f4f4f5] w-29/100 rounded-tr-2xl rounded-br-2xl gap-3 *:w-full">
+                        <img class="mt-2 h-35 object-cover rounded-lg" src="assets/Images/dropdown1.webp" alt="">
+                        <div class="flex flex-wrap content-between *:w-full">
+                            <div class="flex flex-wrap *:w-full">
+                                <span class="font-semibold text-[15px]">personal agents are here. meet them on your terms.</span>
+                                <span class="text-[14px]">detectoin of personal agents and a dedicated channel to serve them, with permissions you controll.</span>
+                            </div>
+                            <button class="text-left flex gap-2.5 items-center hover:bg-white cursor-pointer rounded-lg p-2.5">see what it can do<i class="icon"></i></button>
+                        </div>
+                    </div>
                 </div>
             </li>
 
-            <li>industries
+            <li class="group/main">
+                <span class="cursor-pointer">industries</span>
                 <i class="icon"></i>
+
+                <!--=======#1-3-2 DROPDOWN 2 =======-->
+                <div class="absolute top-full left-0 flex w-full invisible opacity-0 group-hover/main:opacity-100 group-hover/main:visible p-10 *:px-4 *:py-5 duration-400 **:duration-400">
+                    <div class="bg-white w-full rounded-tl-2xl rounded-2xl flex flex-wrap *:w-full">
+                        <div class="flex flex-wrap gap-2.5 pt-2.5 pb-2.5 *:w-full">
+                            <ul class="flex flex-wrap gap-3 justify-between *:w-30/100 *:cursor-pointer">
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white">﹈</i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">Finantial services</span>
+                                        <span class="text-[13px]">trust in every interaction</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">travel & hospitality</span>
+                                        <span class="text-[13px]">personalized guest experiences</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white">𐄮</i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">health & wellness</span>
+                                        <span class="text-[13px]">simpler access to care</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">technology</span>
+                                        <span class="text-[13px]">support that scales</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">retail</span>
+                                        <span class="text-[13px]">personalized shopping</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">telecommunications</span>
+                                        <span class="text-[13px]">effortless services</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-center gap-2 group">
+                                    <i class="icon  p-3 bg-[#eaeaeb] rounded-md text-[#242d8e] group-hover:bg-[#333a8d] group-hover:text-white"></i>
+                                    <div class="flex flex-wrap content-center *:w-full">
+                                        <span class="capitalize text-[14px] font-medium leading-3 mt-1">media</span>
+                                        <span class="text-[13px]">stronger subscriber relationships</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </li>
 
-            <li>customers</li>
-            <li>resources</li>
-            <li>company</li>
+            <li class="cursor-pointer">customers</li>
+            <li class="cursor-pointer">resources</li>
+            <li class="cursor-pointer">company</li>
         </ul>
 
-        <!--==================#1-4 SIGN IN BTNS ==================-->
+        <!--==================#1-4 SIGN-IN BTNS ==================-->
         <div class="hidden lg:flex items-center gap-2.5 *:border-2 *:text-[14px]  *:rounded-full *:py-1.5 *:px-3 *:flex *:items-center *:capitalize *:justify-center">
             <a href="" class="font-bold border-black">Sign in</a>
             <a href="" class="bg-black text-white border-red-500">get a demo</a>
