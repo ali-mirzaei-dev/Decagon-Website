@@ -28,10 +28,10 @@
         <i onclick="openMenuMobile()" class="icon text-[20px] lg:hidden"></i>
 
         <!--==================#1-3 NAV  ==================-->
-        <ul class="hidden lg:flex gap-6 h-full *:capitalize *:flex *:items-center *:gap-1.5">
+        <ul class="hidden lg:flex gap-6 h-full *:capitalize *:flex *:items-center">
             <li class="group/main">
                 <span class="cursor-pointer">product</span>
-                <i class="icon"></i>
+                <i class="icon cursor-pointer pl-1.5"></i>
 
                 <!--=======#1-3-1 DROPDOWN 1 =======-->
                 <div class="absolute top-full left-0 flex w-full opacity-0 invisible group-hover/main:opacity-100 group-hover/main:visible p-10 *:px-4 *:py-5 duration-400 **:duration-400">
@@ -169,7 +169,7 @@
 
             <li class="group/main">
                 <span class="cursor-pointer">industries</span>
-                <i class="icon"></i>
+                <i class="icon cursor-pointer pl-1.5"></i>
 
                 <!--=======#1-3-2 DROPDOWN 2 =======-->
                 <div class="absolute top-full left-0 flex w-full invisible opacity-0 group-hover/main:opacity-100 group-hover/main:visible p-10 *:px-4 *:py-5 duration-400 **:duration-400">
@@ -239,21 +239,41 @@
         <!--==================#1-4 SIGN-IN BTNS ==================-->
         <div class="hidden lg:flex items-center gap-2.5 *:border-2 *:text-[14px]  *:rounded-full *:py-1.5 *:px-3 *:flex *:items-center *:capitalize *:justify-center">
             <a href="" class="font-bold border-black">Sign in</a>
-            <a href="" class="bg-black text-white border-red-500">get a demo</a>
+            <a href="" class="bg-black text-white border-red-400">get a demo</a>
         </div>
 
     </header>
 
+    <!--==================#2 MAIN CONTENT ==================-->
+    <!--==================================================-->
     <main class="flex flex-wrap content-start">
 
+        <!--==================#2-1 HERO  ==================-->
         <section class="relative h-[300vh]">
             <div class="sticky top-0 h-screen overflow-hidden flex">
                 <div id="sliderTrack" class="flex">
-                    <img src="assets/Images/1.jpg" class="w-screen h-screen object-cover shrink-0" alt="">
-                    <img src="assets/Images/2.jpg" class="w-screen h-screen object-cover shrink-0" alt="">
-                    <img src="assets/Images/3.jpg" class="w-screen h-screen object-cover shrink-0" alt="">
+                    <figure class="relative w-screen h-screen shrink-0">
+                        <img src="assets/Images/1.jpg" class="w-full h-full object-cover  " alt="">
+                        <figcaption id="heroCaption1" class=" scale-0 duration-500 ease-out absolute bottom-5/100 right-10/100 border-2 border-[ffffff9d] rounded-2xl py-2.5 px-5 backdrop-blur-2xl bg-[00000008] w-82.5 text-[22px] z-100 text-left text-white">I’ve applied your membership perks.</figcaption>
+                    </figure>
+
+                    <figure id="heroFigureAfter2" class="relative w-screen h-screen shrink-0">
+                        <img src="assets/Images/2.jpg" class="w-full h-full object-cover  " alt="">
+                        <!-- <figcaption class="absolute bottom-5/100 -right-10/100 border-2 border-[ffffff9d] rounded-2xl py-2.5 px-5 backdrop-blur-2xl bg-[00000008] w-82.5 text-[22px] z-100 text-left text-white">I’ve applied your membership perks.</figcaption> -->
+                    </figure>
+
+                    <figure id="heroFigureAfter3" class="relative w-screen h-screen shrink-0">
+                        <img src="assets/Images/3.jpg" class="w-full h-full object-cover  " alt="">
+                        <!-- <figcaption class="absolute bottom-5/100 -right-10/100 border-2 border-[ffffff9d] rounded-2xl py-2.5 px-5 backdrop-blur-2xl bg-[00000008] w-82.5 text-[22px] z-100 text-left text-white">I’ve applied your membership perks.</figcaption> -->
+                    </figure>
                 </div>
+
             </div>
+        </section>
+
+        <!--==================#2-2 LOGOS ==================-->
+        <section class="h-screen">
+
         </section>
 
     </main>
