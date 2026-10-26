@@ -311,29 +311,61 @@
         </section>
 
         <!--==================#2-3 POWERING ==================-->
-        <section class="bg-[#ededee] w-full flex flex-wrap justify-center px-3 *:w-full">
+        <section class="bg-[#ededee] w-full flex flex-wrap justify-center  *:w-full">
 
             <!--=======#2-3-1 POWERING AND BUTTONS =======-->
-            <div class="max-w-266 flex flex-wrap justify-between gap-5">
+            <div class="max-w-266 flex flex-wrap justify-between gap-5 px-3">
                 <div class="flex flex-col gap-8 w-full md:max-w-65/100 md:mb-20">
                     <h2 class="text-[clamp(1.5rem,4vw,2.2rem)] font-medium">Powering concierge experiences for the world’s leading enterprises.</h2>
                     <p class="text-[clamp(15px,1.2vw,20px)]">See how leading brands go beyond traditional support with an AI concierge that delivers trusted, personalized experiences across the entire customer lifecycle.</p>
                 </div>
                 <div class="flex flex-col gap-3.5 mb-20 md:mb-0 md:translate-y-8">
-                    <a class="border border-blue-700 rounded-full py-2.5 px-5 font-semibold text-blue-800 hover:shadow-md duration-500 hover:shadow-blue-400" href="">See all customer stories</a>
+                    <a class="border border-[#6a52ff] rounded-full py-2.5 px-5 font-semibold text-[#6a52ff] hover:shadow-md duration-500 hover:-translate-y-0.5" href="">See all customer stories</a>
                     <div class="flex gap-3 *:bg-white *:border *:flex *:justify-center items-center *:border-gray-400 *:py-2.5 *:px-3 *:rounded-full">
-                        <button onclick="leftLogo()" class="hover:-translate-y-0.5 duration-500" ><i class="icon"></i></button>
-                        <button onclick="rightLogo()" class="hover:-translate-y-0.5 duration-500" ><i class="icon"></i></button>
+                        <button onclick="leftLogo()" class="hover:-translate-y-0.5 duration-500"><i class="icon"></i></button>
+                        <button onclick="rightLogo()" class="hover:-translate-y-0.5 duration-500"><i class="icon"></i></button>
                     </div>
                 </div>
             </div>
 
             <!--=======#2-3-2 LOGOS ORDER =======-->
-            <div id="logoParent" class="max-w-266 flex lg:justify-between gap-2.5 pb-10 *:relative *:w-10/100 *:lg:w-22/100 *:h-12 *:lg:h-12 *:border-t-2 *:border-t-[#b8b8b8e1] *:pt-3.5 *:flex *:justify-center *:items-center *:flex-1">
+            <div id="logoParent" class="max-w-266 flex lg:justify-between px-3 gap-2.5 pb-12 *:relative *:w-10/100 *:lg:w-22/100 *:h-12 *:lg:h-12 *:border-t-2 *:border-t-[#b8b8b8e1] *:pt-3.5 *:flex *:justify-center *:items-center *:flex-1">
                 <figure data-active="active" class="active"><img class="hidden grayscale-100  lg:block w-30 lg:w-35 h-full object-cover" src="assets/Images/6a68cd6427017d08dfac2270_Company=Class Pass, Variant=Colored.svg" alt=""></figure>
                 <figure data-active="off"><img class="hidden grayscale-100  lg:block w-30 lg:w-30 h-full object-cover" src="assets/Images/6a68ccd86223bd8a68815bce_Company=Chime, Variant=Colored.svg" alt=""></figure>
                 <figure data-active="off"><img class="hidden grayscale-100  lg:block w-30 lg:w-35 h-full object-cover" src="assets/Images/6a68cd0fe0e3b20f8dff21b3_Company=Duolingo, Variant=Colored.svg" alt=""></figure>
                 <figure data-active="off"><img class="hidden  grayscale-100 lg:block w-30 lg:w-40 h-full object-cover" src="assets/Images/6a68cc87f3b34415f1b73efd_Company=Hunter Douglas, Variant=Colored.svg" alt=""></figure>
+            </div>
+
+            <!--=======#2-3-3 WITH DECAGON VOICE =======-->
+            <div class="max-w-266 flex flex-wrap pb-30 border-b px-3 border-b-[#80808093] lg:flex-nowrap">
+
+                <!-- right side -->
+                <div class="w-full flex flex-wrap border-b pb-8 mx-[clamp(6px,1.3vw,40px)] border-b-[#80808073] *:w-full lg:hidden">
+                    <span class="text-[90px] text-[#6a52ff]">70%</span>
+                    <span class="text-xl font-semibold mb-10">chat and voice resolution</span>
+                    <a class="border-b border-b-[#6a52ff] text-[#6a52ff] w-fit! font-semibold flex items-center gap-1 capitalize group" href="">read story <i class="icon group-hover:translate-x-1 duration-400 translate-y-1"></i></a>
+                </div>
+
+
+                <!-- left side -->
+                <div class="flex flex-wrap py-8 gap-5 lg:max-w-60/100 lg:pr-10 *:w-full">
+                    <p class="text-[clamp(16px,3vw,20px)] font-medium px-2">With Decagon Voice, we’re able to combine high performance and seamless brand customization with cross-channel memory, ensuring every interaction is connected and true to Chime’s member-first values.</p>
+                    <figure class="flex gap-3.5 items-center">
+                        <img class="rounded-full w-20 h-20 lg:w-26 lg:h-26 object-cover" src="assets/Images/6a22d483b3f0da401a3b13e3_author-image-janelle-chime.png" alt="">
+                        <figcaption class="flex flex-col">
+                            <span class="font-semibold">Janelle Sallenave</span>
+                            <span class="text-[14px] ">Chief Operating Officer</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <!-- right side -->
+                <div class="w-full lg:flex justify-center content-start flex-wrap *:text-center *:w-full hidden border-l border-l-[#8080805d]">
+                    <span class="text-[90px] text-[#6a52ff]">70%</span>
+                    <span class="text-xl font-semibold mb-10">chat and voice resolution</span>
+                    <a class="border-b border-b-[#6a52ff] text-[#6a52ff] w-fit! font-semibold flex items-center gap-1 capitalize group" href="">read story <i class="icon group-hover:translate-x-1 duration-400 translate-y-1"></i></a>
+                </div>
+
             </div>
         </section>
 
