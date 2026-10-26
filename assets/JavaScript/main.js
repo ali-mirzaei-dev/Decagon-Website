@@ -148,3 +148,38 @@ addEventListener('scroll', () => {
         }
     }
 })
+
+// ------- MOUSE IN  ------- //
+const h6Title = document.querySelectorAll(".h6Title")
+const imgOrder = document.querySelectorAll(".imgOrder")
+const h6TitleReal = [...h6Title]
+const imgOrderReal = [...imgOrder]
+let activeImgIndex = 1
+
+function hoverIn(e) {
+
+    imgIndex = e.target.getAttribute("data-active")
+
+    if (imgIndex === activeImgIndex) return
+
+    imgOrderReal.forEach((val) => {
+
+        val.classList.add("opacity-0")
+        val.classList.remove("opacity-100")
+
+        setTimeout(() => {
+            val.classList.add("hidden")
+        }, 400);
+    })
+
+    imgToShow = imgOrderReal.findIndex((val) => val.getAttribute("data-order") == imgIndex)
+
+    imgOrderReal[imgToShow].classList.add("opacity-100")
+    imgOrderReal[imgToShow].classList.remove("opacity-0")
+
+    setTimeout(() => {
+        imgOrderReal[imgToShow].classList.remove("hidden")
+    }, 510);
+
+    activeImgIndex = imgIndex
+}
