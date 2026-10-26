@@ -32,7 +32,7 @@ addEventListener("scroll", () => {
         } else if (scrollProgress >= 0.71) {
             heroCaption3.classList.remove("scale-0")
             heroCaption3.classList.add("scale-100")
-            heroCaption3.style.right =  `calc(130% + ${-slideRight * 1.2}px)`
+            heroCaption3.style.right = `calc(130% + ${-slideRight * 1.2}px)`
         } else {
             heroCaption1.classList.add("scale-0")
             heroCaption2.classList.add("scale-0")
@@ -44,4 +44,50 @@ addEventListener("scroll", () => {
 
     }
 
+})
+
+
+const logos = document.querySelectorAll("#logoParent>figure")
+
+function leftLogo() {
+    const activeFigureIndex = [...logos].findIndex(val => val.getAttribute("data-active") == 'active')
+    logos[activeFigureIndex].setAttribute("data-active", "off")
+    logos[activeFigureIndex].classList.remove("active")
+
+
+    let newActiveFigureIndex = null
+    if (activeFigureIndex == 0) {
+        newActiveFigureIndex = 3
+    } else {
+        newActiveFigureIndex = activeFigureIndex - 1
+    }
+
+    logos[newActiveFigureIndex].setAttribute("data-active", "active")
+    logos[newActiveFigureIndex].classList.add("active")
+
+}
+
+function rightLogo() {
+    const activeFigureIndex = [...logos].findIndex(val => val.getAttribute("data-active") == 'active')
+    logos[activeFigureIndex].setAttribute("data-active", "off")
+    logos[activeFigureIndex].classList.remove("active")
+
+
+    let newActiveFigureIndex = null
+    if (activeFigureIndex == 3) {
+        newActiveFigureIndex = 0
+    } else {
+        newActiveFigureIndex = activeFigureIndex + 1
+    }
+    logos[newActiveFigureIndex].setAttribute("data-active", "active")
+    logos[newActiveFigureIndex].classList.add("active")
+
+}
+
+const logoParent = document.getElementById("logoParent")
+
+logoParent.addEventListener("animationend", (e) => {
+    if (e.animationName === "borderTop") {
+        rightLogo()
+    }
 })

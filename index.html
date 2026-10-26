@@ -12,7 +12,7 @@
 
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden h-[700vh]">
 
     <!--==================#1 HEADER ==================-->
     <!--==================================================-->
@@ -275,8 +275,8 @@
         </section>
 
         <!--==================#2-2 LOGOS ==================-->
-        <section class="bg-[#ededee] w-full flex justify-center py-15 ">
-            <div class="w-full max-w-266.25 grid grid-cols-6 grid-rows-5 *:grayscale-100 *:hover:grayscale-0 *:opacity-50 *:hover:opacity-100 *:duration-400">
+        <section class="bg-[#ededee] w-full flex justify-center px-3 py-15 ">
+            <div class="w-full max-w-266.25 grid grid-cols-3 grid-rows-10 lg:grid-cols-6 lg:grid-rows-5 *:grayscale-100 *:hover:grayscale-0 *:opacity-50 *:hover:opacity-100 *:duration-400">
                 <img src="assets/Images/deutsche_telekom-logo.svg" alt="">
                 <img src="assets/Images/6a7da7d90046e8df0a0b27dc_american-airlines-logo.svg" alt="">
                 <img src="assets/Images/69836d7f4ee46d3899efbeb7_squareup-logo.svg" alt="">
@@ -307,6 +307,33 @@
                 <img src="assets/Images/697a4c2b5fac794121ef7222_Logo-19.svg" alt="">
                 <img src="assets/Images/697a4ae5368649e122b128dc_Logo-12.svg" alt="">
                 <img src="assets/Images/6a9ecf7c5aa718ad23a82dc1_logo-id-me.svg" alt="">
+            </div>
+        </section>
+
+        <!--==================#2-3 POWERING ==================-->
+        <section class="bg-[#ededee] w-full flex flex-wrap justify-center px-3 *:w-full">
+
+            <!--=======#2-3-1 POWERING AND BUTTONS =======-->
+            <div class="max-w-266 flex flex-wrap justify-between gap-5">
+                <div class="flex flex-col gap-8 w-full md:max-w-65/100 md:mb-20">
+                    <h2 class="text-[clamp(1.5rem,4vw,2.2rem)] font-medium">Powering concierge experiences for the world’s leading enterprises.</h2>
+                    <p class="text-[clamp(15px,1.2vw,20px)]">See how leading brands go beyond traditional support with an AI concierge that delivers trusted, personalized experiences across the entire customer lifecycle.</p>
+                </div>
+                <div class="flex flex-col gap-3.5 mb-20 md:mb-0 md:translate-y-8">
+                    <a class="border border-blue-700 rounded-full py-2.5 px-5 font-semibold text-blue-800 hover:shadow-md duration-500 hover:shadow-blue-400" href="">See all customer stories</a>
+                    <div class="flex gap-3 *:bg-white *:border *:flex *:justify-center items-center *:border-gray-400 *:py-2.5 *:px-3 *:rounded-full">
+                        <button onclick="leftLogo()" class="hover:-translate-y-0.5 duration-500" ><i class="icon"></i></button>
+                        <button onclick="rightLogo()" class="hover:-translate-y-0.5 duration-500" ><i class="icon"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!--=======#2-3-2 LOGOS ORDER =======-->
+            <div id="logoParent" class="max-w-266 flex lg:justify-between gap-2.5 pb-10 *:relative *:w-10/100 *:lg:w-22/100 *:h-12 *:lg:h-12 *:border-t-2 *:border-t-[#b8b8b8e1] *:pt-3.5 *:flex *:justify-center *:items-center *:flex-1">
+                <figure data-active="active" class="active"><img class="hidden grayscale-100  lg:block w-30 lg:w-35 h-full object-cover" src="assets/Images/6a68cd6427017d08dfac2270_Company=Class Pass, Variant=Colored.svg" alt=""></figure>
+                <figure data-active="off"><img class="hidden grayscale-100  lg:block w-30 lg:w-30 h-full object-cover" src="assets/Images/6a68ccd86223bd8a68815bce_Company=Chime, Variant=Colored.svg" alt=""></figure>
+                <figure data-active="off"><img class="hidden grayscale-100  lg:block w-30 lg:w-35 h-full object-cover" src="assets/Images/6a68cd0fe0e3b20f8dff21b3_Company=Duolingo, Variant=Colored.svg" alt=""></figure>
+                <figure data-active="off"><img class="hidden  grayscale-100 lg:block w-30 lg:w-40 h-full object-cover" src="assets/Images/6a68cc87f3b34415f1b73efd_Company=Hunter Douglas, Variant=Colored.svg" alt=""></figure>
             </div>
         </section>
 

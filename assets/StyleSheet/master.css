@@ -4,3 +4,34 @@
     will-change: transform;
     transition: transform 0.1s ease-out;
 }
+
+@keyframes borderTop {
+    100% {
+        width: 100%;
+    }
+}
+
+.active {
+    flex: 10;
+
+    @media (width >=64rem) {
+        flex: 1;
+    }
+
+    >img {
+        display: block;
+        filter: grayscale(0);
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        background-color: black;
+        animation: borderTop 10s linear;
+        border-radius: 16px;
+    }
+}
