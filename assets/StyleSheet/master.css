@@ -39,3 +39,10 @@
 .imgOrder {
     transition: opacity 0.4s linear;
 }
+
+.bgMask{
+    background-image: url(../Images/6970f16106ba6864474ba416_Image\(6\).avif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
