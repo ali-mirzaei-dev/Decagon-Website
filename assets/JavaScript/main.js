@@ -3,18 +3,71 @@ const sliderSection = sliderTrack.closest("section")
 const heroCaption1 = document.getElementById("heroCaption1")
 const heroCaption2 = document.getElementById("heroCaption2")
 const heroCaption3 = document.getElementById("heroCaption3")
+const moon = document.getElementById("moon")
+
+let mouseX = 0, mouseY = 0
+let smoothMouseX = 0, smoothMouseY = 0
+let moonProgress = 0
+let moonPastHero = false
+
+function smoothstep(t) {
+    t = Math.max(0, Math.min(1, t))
+    return t * t * (3 - 2 * t)
+}
+
+addEventListener("mousemove", (e) => {
+    const centerX = innerWidth / 2
+    const centerY = innerHeight / 2
+    mouseX = ((e.clientX - centerX) / centerX) * 20
+    mouseY = ((e.clientY - centerY) / centerY) * 20
+})
+
+// ------- MOON ANIMATION ------- //
+function animateMoon() {
+    smoothMouseX += (mouseX - smoothMouseX) * 0.06
+    smoothMouseY += (mouseY - smoothMouseY) * 0.06
+
+    if (moonPastHero) {
+        moon.style.transform = `translate(${120 + smoothMouseX}px, ${smoothMouseY}px)`
+    } else if (moonProgress >= 0 && moonProgress <= 1) {
+        const p = moonProgress
+        let yMovePx, xMovePx
+
+        if (p < 0.30) {
+            const t = p / 0.30
+            yMovePx = -innerHeight * 0.15 * smoothstep(t)
+            xMovePx = 0
+        } else if (p < 0.55) {
+            const t = (p - 0.30) / 0.25
+            yMovePx = -innerHeight * 0.15
+            xMovePx = 120 * smoothstep(t)
+        } else {
+            const t = (p - 0.55) / 0.45
+            yMovePx = -innerHeight * 0.15 + innerHeight * 0.25 * smoothstep(t)
+            xMovePx = 120
+        }
+
+        moon.style.transform = `translate(${xMovePx + smoothMouseX}px, ${yMovePx + smoothMouseY}px)`
+    }
+
+    requestAnimationFrame(animateMoon)
+}
+animateMoon()
 
 // ------- HERO SCROLL ANIMATION ------- //
-addEventListener("scroll", () => {
-
+function updateHero() {
     const rect = sliderSection.getBoundingClientRect()
     const sectionHeight = sliderSection.offsetHeight - innerHeight
 
-
     if (rect.top <= 0 && rect.top >= -sectionHeight) {
-        const scrollProgress = Math.abs(rect.top) / sectionHeight
-        const shiftAmount = scrollProgress * (innerWidth * 2)
+        moonPastHero = false
+        moon.style.position = 'fixed'
+        moon.style.top = '25vh'
 
+        const scrollProgress = Math.abs(rect.top) / sectionHeight
+        moonProgress = scrollProgress
+
+        const shiftAmount = scrollProgress * (innerWidth * 2)
         sliderTrack.style.transform = `translateX(-${shiftAmount}px)`
         const slideRight = (scrollProgress - 0.05) * (innerWidth * 0.6)
 
@@ -22,10 +75,8 @@ addEventListener("scroll", () => {
             heroCaption1.classList.remove("scale-0")
             heroCaption1.classList.add("scale-100")
             heroCaption1.style.right = `calc(10% + ${-slideRight}px)`
-
             heroCaption2.classList.add("scale-0")
             heroCaption3.classList.add("scale-0")
-
         } else if (scrollProgress >= 0.41 && scrollProgress <= 0.7) {
             heroCaption2.classList.remove("scale-0")
             heroCaption2.classList.add("scale-100")
@@ -42,10 +93,22 @@ addEventListener("scroll", () => {
             heroCaption2.classList.remove("scale-100")
             heroCaption3.classList.remove("scale-100")
         }
-
+    } else if (rect.top > 0) {
+        moonPastHero = false
+        moon.style.position = 'fixed'
+        moon.style.top = '25vh'
+        moonProgress = 0
+    } else {
+        moonPastHero = true
+        moonProgress = 1
+        moon.style.position = 'absolute'
+        moon.style.top = `${sliderSection.offsetHeight - 0.65 * innerHeight}px`
     }
+}
 
-})
+addEventListener("scroll", updateHero)
+updateHero()
+
 
 
 // ------- CAROSUEL LEFT BTN ------- //
