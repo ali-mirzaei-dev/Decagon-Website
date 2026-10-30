@@ -1733,6 +1733,12 @@
     .lg\:h-\[300vh\] {
       height: 300vh;
     }
+    .lg\:h-\[500vh\] {
+      height: 500vh;
+    }
+    .lg\:h-\[600vh\] {
+      height: 600vh;
+    }
     .lg\:w-1\/2 {
       width: calc(1 / 2 * 100%);
     }
